@@ -4,20 +4,25 @@
 import PackageDescription
 
 let package = Package(
-    name: "Template",
+    name: "Logger",
+    platforms: [
+        .iOS(.v10),
+        .tvOS(.v10),
+        .macOS(.v10_12),
+    ],
     products: [
         .library(
-            name: "Template",
-            targets: ["Template"]),
+            name: "Logger",
+            targets: ["Logger"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "Template",
+            name: "Logger",
             dependencies: []),
         .testTarget(
-            name: "TemplateTests",
-            dependencies: ["Template"]),
+            name: "LoggerTests",
+            dependencies: ["Logger"]),
     ]
 )
