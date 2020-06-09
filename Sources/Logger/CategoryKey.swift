@@ -4,6 +4,8 @@
 // MIT license, see LICENSE file for details
 //
 
+/// Custom category used to mark log message category
+@usableFromInline
 public protocol CategoryKey: ExpressibleByStringLiteral, RawRepresentable where RawValue == String {
 	static var `default`: Self { get }
 }
