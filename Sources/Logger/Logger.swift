@@ -29,6 +29,16 @@ public struct Logger<Category: CategoryKey>: Loggerable {
 		return logger
 	}
 
+    /// - Parameters:
+    ///   - level: The log level that will be used for logged message.
+    ///   - access: Access level describing publiicity of the logged message.
+    ///   - message: The message to be logged.
+    ///   - category: Custom category of the logged message.
+    ///   - userInfo: Additional custom info..
+    ///   - fileName: Root file name of the log.
+    ///   - functionName: Root function name of the log.
+    ///   - lineNumber: Line number if the log.
+    @usableFromInline
 	@inlinable
 	public func log(level: LogLevel,
 	                access: AccessLevel?,
